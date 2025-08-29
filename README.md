@@ -4,6 +4,7 @@
 
 ### Answer:
 Three Schema Architecture
+
 The three-schema architecture is a framework proposed by ANSI-SPARC that separates a database system into three levels of abstraction.
 It helps achieve data independence and provides multiple views of data to users.
 
