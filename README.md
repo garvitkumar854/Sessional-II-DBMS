@@ -180,7 +180,7 @@ Why Are Anomalies Bad?
 - **Modification Anomaly:** Updating data requires multiple changes → inconsistency risk.  
 - **Reason they are bad:** They reduce reliability, increase redundancy, and cause inconsistency in the database.
 
-## Question: bDiscuss in detail the MS-Access Table creation process, including data types, field properties, and field names ?
+## Question: Discuss in detail the MS-Access Table creation process, including data types, field properties, and field names ?
 
 ### MS-Access Table Creation Process
 
