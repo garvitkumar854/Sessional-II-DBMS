@@ -121,4 +121,62 @@ Importance of Referential Integrity
 
 ✅ Summary
 - **Integrity Constraints** are rules that maintain correctness of data.  
-- **Referential Integrity** ensures foreign key values always match existing primary key values, preventing orphan records and preserving consistency in relationships between tables.  
+- **Referential Integrity** ensures foreign key values always match existing primary key values, preventing orphan records and preserving consistency in relationships between tables.
+
+## Question: Explain insertion, deletion and modification anomalies. Why are they considered bad? Illustrate with example ?
+
+Introduction
+When data is stored in a single large table (without normalization), it often causes **data redundancy** and **inconsistency**.  
+The problems that arise are called **Anomalies**.
+
+---
+1. Insertion Anomaly
+- **Definition:**  
+  Occurs when we cannot insert a new fact into the database without inserting some unrelated data.  
+
+- **Example:**  
+
+| StudentID | StudentName | CourseID | CourseName |
+|-----------|-------------|----------|------------|
+| 1         | Alice       | C101     | DBMS       |
+
+- **Problem:**  
+  If a new course `C102 – Networks` is introduced but no student has enrolled yet, we **cannot insert the course** without entering a fake student.
+
+---
+
+2. Deletion Anomaly
+- **Definition:**  
+  Occurs when deleting one fact also deletes other important information unintentionally.  
+
+- **Example:**  
+  If Alice (StudentID=1) drops the course `C101 – DBMS`, and we delete her row, then information about the course `C101 – DBMS` is **also lost**.
+
+---
+
+3. Modification Anomaly
+- **Definition:**  
+  Occurs when updating a value requires multiple changes, leading to inconsistency if all occurrences are not updated.  
+
+- **Example:**  
+  Suppose course `C101 – DBMS` is renamed to `Advanced DBMS`.  
+  We must update all rows where CourseID = C101.  
+  If one row is missed, the database becomes **inconsistent**.
+
+---
+
+Why Are Anomalies Bad?
+- Cause **data redundancy** (same data repeated).  
+- Lead to **inconsistency** (different values for same fact).  
+- Increase **storage cost** and complexity.  
+- Violate data integrity.  
+- Make database unreliable.  
+
+---
+
+✅ Summary
+- **Insertion Anomaly:** Cannot insert new data without unrelated data.  
+- **Deletion Anomaly:** Deleting data causes unintended loss of other information.  
+- **Modification Anomaly:** Updating data requires multiple changes → inconsistency risk.  
+- **Reason they are bad:** They reduce reliability, increase redundancy, and cause inconsistency in the database.  
+
