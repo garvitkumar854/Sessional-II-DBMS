@@ -254,7 +254,7 @@ Field properties define constraints and formatting for each field. Common proper
 
 ---
 
-## ✅ Summary
+#### ✅ Summary
 1. Open or create a database.  
 2. Create a table in **Design View** or **Datasheet View**.  
 3. Define **field names** carefully.  
