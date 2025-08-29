@@ -32,3 +32,37 @@ Why Mappings Between Schema Levels Are Required?
 - Physical Data Independence: Changes in physical storage (e.g., new indexing method) should not affect conceptual schema.
 - Multiple User Views: Different external schemas (student, teacher, admin) can map to the same conceptual schema.
 - Consistency & Integrity: Ensures that changes at one level don’t break other levels.
+
+## Question: Demonstrate the concepts of Generalization & Specialization with examples
+
+Generalization
+- **Definition:** A bottom-up process of combining two or more lower-level entities into a higher-level, more general entity.  
+- **Purpose:** Used when different entities share common attributes.  
+- **Example:**  
+  - Entities: Car, Bike, Truck  
+  - Generalized entity: Vehicle (common attributes: vehicle_id, color, engine_capacity)
+
+---
+Specialization
+- **Definition:** A top-down process of dividing a higher-level entity into lower-level, more specific entities.  
+- **Purpose:** Used when sub-entities need additional attributes or functions.  
+- **Example:**  
+  - Entity: Employee  
+  - Specialized entities:  
+    - Teacher (extra attribute: Subject)  
+    - Engineer (extra attribute: Project)  
+
+---
+Key Differences
+| **Generalization** | **Specialization** |
+|---------------------|---------------------|
+| Bottom-up approach | Top-down approach |
+| Combines multiple entities into one general entity | Splits one entity into multiple sub-entities |
+| Focuses on common attributes | Focuses on unique attributes |
+| “Many to One” process | “One to Many” process |
+| Example: Car, Bike → Vehicle | Example: Employee → Teacher, Engineer |
+
+---
+✅ Summary
+- **Generalization:** Combining entities (common features).  
+- **Specialization:** Splitting entity (unique features).  
