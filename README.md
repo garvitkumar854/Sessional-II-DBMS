@@ -25,3 +25,10 @@ It helps achieve data independence and provides multiple views of data to users.
 - Example: A student sees only his marks, while an admin sees all records.
 
 <img width= 500 src="https://miro.medium.com/1*2pF7iW4rT8T-vZyXlZ8zOg.png">
+
+Why Mappings Between Schema Levels Are Required?
+- Data Abstraction: Users can query without worrying about how data is stored physically.
+- Logical Data Independence: Changes in conceptual schema (e.g., new attribute) should not affect user views.
+- Physical Data Independence: Changes in physical storage (e.g., new indexing method) should not affect conceptual schema.
+- Multiple User Views: Different external schemas (student, teacher, admin) can map to the same conceptual schema.
+- Consistency & Integrity: Ensures that changes at one level don’t break other levels.
