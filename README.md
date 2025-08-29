@@ -23,4 +23,4 @@ It helps achieve data independence and provides multiple views of data to users.
 - Hides details irrelevant to users, showing only required data.
 - Example: A student sees only his marks, while an admin sees all records.
 
-<img src="https://miro.medium.com/1*2pF7iW4rT8T-vZyXlZ8zOg.png">
+<img width= 200 src="https://miro.medium.com/1*2pF7iW4rT8T-vZyXlZ8zOg.png">
