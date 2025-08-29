@@ -261,4 +261,82 @@ Field properties define constraints and formatting for each field. Common proper
 4. Choose appropriate **data types**.  
 5. Set **field properties** for data accuracy and constraints.  
 6. Save the table with a meaningful name.  
-7. Optional: Define relationships, indexes, and validation rules for better integrity and performance.  
+7. Optional: Define relationships, indexes, and validation rules for better integrity and performance.
+
+## Question: 
+
+### Setting Up Relationships in MS Access
+
+In MS Access, relationships link tables together using fields (usually primary keys and foreign keys).  
+They help maintain data consistency and enforce **Referential Integrity**.
+
+---
+
+#### Step 1: Open Relationships Window
+1. Open your database in MS Access.  
+2. Go to the **Database Tools** tab.  
+3. Click on **Relationships**.  
+   - A Relationships window opens where you can add tables to define connections.
+
+---
+
+#### Step 2: Add Tables
+1. In the Relationships window, click **Show Table**.  
+2. Select the tables you want to relate (e.g., `Employees`, `Books`, `Loans`).  
+3. Click **Add**, then close the dialog.  
+4. Tables now appear in the Relationships window as boxes.
+
+---
+
+#### Step 3: Define Relationships
+1. Click and drag the **Primary Key** field of one table (e.g., `EmployeeID` in `Employees`).  
+2. Drop it on the matching **Foreign Key** field of another table (e.g., `EmployeeID` in `Loans`).  
+3. The **Edit Relationships** dialog box appears.  
+
+---
+
+#### Step 4: Add Relationship Options
+- In the dialog, you can see:
+  - **Primary Table:** The table with the primary key.  
+  - **Related Table:** The table with the foreign key.  
+  - **Fields:** The linking columns.  
+
+- Click **Create** to add the relationship.
+
+---
+
+#### Step 5: Enforce Referential Integrity
+To maintain consistent data:
+1. Check the **Enforce Referential Integrity** box.  
+2. Options under it:
+   - **Cascade Update Related Fields:** If the primary key is updated, all related records update automatically.  
+   - **Cascade Delete Related Records:** If a primary key record is deleted, all related records in the child table are also deleted.  
+
+---
+
+#### Step 6: Save Relationships
+- Click **Save** on the toolbar.  
+- The defined relationships are now stored in the database schema.  
+
+---
+
+#### ✅ Example
+- **Tables:**  
+  - `Employees (EmpID, Name, DeptID)`  
+  - `Departments (DeptID, DeptName)`  
+- **Relationship:**  
+  - `Departments.DeptID` → `Employees.DeptID`  
+- **Referential Integrity:**  
+  - Ensures that no employee can exist without a valid department.  
+
+---
+
+#### ✅ Summary
+1. Open **Relationships** window.  
+2. Add tables to relate.  
+3. Drag and drop **Primary Key → Foreign Key**.  
+4. Enable **Referential Integrity** and cascade options.  
+5. Save the relationship setup.  
+
+This ensures data consistency, prevents orphan records, and maintains database integrity.
+
