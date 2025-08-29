@@ -263,7 +263,7 @@ Field properties define constraints and formatting for each field. Common proper
 6. Save the table with a meaningful name.  
 7. Optional: Define relationships, indexes, and validation rules for better integrity and performance.
 
-## Question: 
+## Question: Explain the process of setting up relationships in MS Access, including defining relationships, adding them, and setting referential integrity rules.
 
 ### Setting Up Relationships in MS Access
 
