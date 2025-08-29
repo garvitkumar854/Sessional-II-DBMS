@@ -1,6 +1,6 @@
 # Sessional-II-DBMS
 
-## Question: Explain three schema architecture. Why mappings between schema levels are required?
+## Question: Explain three schema architecture. Why mappings between schema levels are required ?
 
 ### Answer:
 Three Schema Architecture
@@ -33,7 +33,7 @@ Why Mappings Between Schema Levels Are Required?
 - Multiple User Views: Different external schemas (student, teacher, admin) can map to the same conceptual schema.
 - Consistency & Integrity: Ensures that changes at one level don’t break other levels.
 
-## Question: Demonstrate the concepts of Generalization & Specialization with examples
+## Question: Demonstrate the concepts of Generalization & Specialization with examples ?
 
 Generalization
 - **Definition:** A bottom-up process of combining two or more lower-level entities into a higher-level, more general entity.  
@@ -70,3 +70,55 @@ Key Differences
 ✅ Summary
 - **Generalization:** Combining entities (common features).  
 - **Specialization:** Splitting entity (unique features).  
+
+## Question: What is an Integrity Constraint? Explain the importance of Referential Integrity Constraint ?
+
+Integrity Constraint
+- **Definition:**  
+  Integrity constraints are rules enforced on database tables to ensure the **accuracy, consistency, and validity** of the data.  
+- **Purpose:**  
+  They prevent invalid or inconsistent data from being inserted into the database.  
+
+Types of Integrity Constraints
+1. **Entity Integrity:**  
+   - Every table must have a primary key.  
+   - Primary key values cannot be NULL or duplicate.  
+
+2. **Referential Integrity:**  
+   - A foreign key in one table must either be NULL or match a primary key in another table.  
+
+3. **Domain Integrity:**  
+   - Attributes must have valid values (e.g., age must be > 0).  
+---
+
+Referential Integrity Constraint
+- **Definition:**  
+  Referential Integrity ensures that the **relationship between two tables remains consistent**.  
+  If a table (child) has a foreign key referencing another table (parent), then the foreign key value must exist in the parent table’s primary key.  
+
+**Example:**  
+- Table: `Student(Stud_ID, Name, Dept_ID)`  
+- Table: `Department(Dept_ID, Dept_Name)`  
+- Rule: Every `Dept_ID` in **Student** must exist in **Department**.  
+
+---
+
+Importance of Referential Integrity
+1. **Prevents Orphan Records:**  
+   Ensures no record in the child table refers to a non-existent record in the parent table.  
+
+2. **Maintains Consistency:**  
+   Guarantees relationships between tables remain valid.  
+
+3. **Supports Cascading Actions:**  
+   - **Cascade Update:** If a primary key value changes, all related foreign keys are updated.  
+   - **Cascade Delete:** If a parent record is deleted, related child records are deleted (if chosen).  
+
+4. **Improves Data Accuracy:**  
+   Ensures that foreign key values always point to valid primary keys.  
+
+---
+
+✅ Summary
+- **Integrity Constraints** are rules that maintain correctness of data.  
+- **Referential Integrity** ensures foreign key values always match existing primary key values, preventing orphan records and preserving consistency in relationships between tables.  
