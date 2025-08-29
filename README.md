@@ -41,7 +41,9 @@ Generalization
 - **Example:**  
   - Entities: Car, Bike, Truck  
   - Generalized entity: Vehicle (common attributes: vehicle_id, color, engine_capacity)
+  - 
 <img src="https://bimstudies.com/wp-content/uploads/2024/10/generalization-1-scaled.png" width=500>
+
 ---
 Specialization
 - **Definition:** A top-down process of dividing a higher-level entity into lower-level, more specific entities.  
@@ -50,8 +52,10 @@ Specialization
   - Entity: Employee  
   - Specialized entities:  
     - Teacher (extra attribute: Subject)  
-    - Engineer (extra attribute: Project)  
+    - Engineer (extra attribute: Project)
+    -  
 <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200422233542/Specialisation_1.jpg" width=500>
+
 ---
 Key Differences
 | **Generalization** | **Specialization** |
